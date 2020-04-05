@@ -14,16 +14,15 @@ Minimize the total number of operations.
 function moveZeroes(nums) {
   // keep track of the current index that we want to replace, start with the first index of the list
   let nextIndexToReplace = 0;
-
   for (let i = 0; i < nums.length; i++) {
     // swap the values and increment the next index to replace
     if (nums[i] != 0) {
+      let temp = nums[nextIndexToReplace];
       nums[nextIndexToReplace] = nums[i];
-      nums[i] = 0;
+      nums[i] = temp;
       nextIndexToReplace++;
     }
   }
-
 }
 
 function moveZeroes(nums) {
